@@ -1,76 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Pesquisa de Hobbies</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            <br><br>
 
-<body>
+            <label for="idade">Sua idade:</label>
+            <br>
+            <input type="number" id="idade" name="idade">
+            <br><br>
 
-    <h1>Pesquisa de Hobbies</h1>
+            <p>Quais hobbies você gosta?</p>
 
-    <form>
+            <input type="checkbox" id="jogos">
+            <label for="jogos">Jogos</label>
+            <br>
 
-        <label for="nome">Seu nome:</label>
-        <br>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
-        <br><br>
+            <input type="checkbox" id="musica">
+            <label for="musica">Ouvir música</label>
+            <br>
 
-        <label for="nome">Seu nome:</label>
-        <br>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
-        <br><br>
+            <input type="checkbox" id="esporte">
+            <label for="esporte">Esportes</label>
+            <br>
 
-        <label for="idade">Sua idade:</label>
-        <br>
-        <input type="number" id="idade" name="idade">
-        <br><br>
+            <input type="checkbox" id="filmes">
+            <label for="filmes">Assistir filmes</label>
+            <br><br>
 
-        <p>Quais hobbies você gosta?</p>
+            <p>Você prefere fazer hobbies:</p>
 
-        <input type="checkbox" id="jogos" name="hobby">
-        <label for="jogos">Jogos</label>
-        <br>
+            <input type="radio" name="preferencia" id="sozinho">
+            <label for="sozinho">Sozinho</label>
+            <br>
 
-        <input type="checkbox" id="musica" name="hobby">
-        <label for="musica">Ouvir música</label>
-        <br>
+            <input type="radio" name="preferencia" id="amigos">
+            <label for="amigos">Com amigos</label>
+            <br><br>
 
-        <input type="checkbox" id="esporte" name="hobby">
-        <label for="esporte">Esportes</label>
-        <br>
+            <label for="tempo">Tempo livre por dia:</label>
+            <br>
 
-        <input type="checkbox" id="filmes" name="hobby">
-        <label for="filmes">Assistir filmes</label>
-        <br><br>
+            <select id="tempo">
+                <option>30 minutos</option>
+                <option>1 hora</option>
+                <option>2 horas</option>
+                <option>Mais de 3 horas</option>
+            </select>
 
-        <p>Você prefere fazer hobbies:</p>
+            <br><br>
 
-        <input type="radio" id="sozinho" name="preferencia">
-        <label for="sozinho">Sozinho</label>
-        <br>
+            <button type="submit">Enviar</button>
 
-        <input type="radio" id="amigos" name="preferencia">
-        <label for="amigos">Com amigos</label>
-        <br><br>
+        </form>
 
-        <label for="tempo">Tempo livre por dia:</label>
-        <br>
-
-        <select id="tempo" name="tempo">
-            <option>30 minutos</option>
-            <option>1 hora</option>
-            <option>2 horas</option>
-            <option>Mais de 3 horas</option>
-        </select>
-
-        <br><br>
-
-        <button type="submit">Enviar</button>
-
-    </form>
+    </div>
 
 </body>
 

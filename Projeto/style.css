@@ -1,18 +1,24 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    margin: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 320px;
 }
 
 h1 {
-    color: #333;
-}
-
-form {
-    background-color: rgb(255, 0, 0);
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
+    text-align: center;
 }
 
 input,
