@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-color: rgba(238, 0, 255, 0.648);
     padding: 30px;
     border-radius: 8px;
     width: 320px;
@@ -22,7 +22,11 @@ h1 {
 }
 
 input,
-select,
-button {
+select {
     margin-top: 5px;
+}
+
+button {
+    display: block;
+    margin: auto;
 }
