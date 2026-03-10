@@ -1,50 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Formulário de Hobbies</h1>
+
+        <form>
+
+            <label for="nome">Nome:</label>
+            <br>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
             <br><br>
 
-            <label for="idade">Sua idade:</label>
+            <label for="idade">Idade:</label>
             <br>
-            <input type="number" id="idade" name="idade">
+            <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
             <br><br>
 
-            <p>Quais hobbies você gosta?</p>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+            <br><br>
 
-            <input type="checkbox" id="jogos">
+            <label for="senha">Senha:</label>
+            <br>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            <br><br>
+
+            <p>Gênero:</p>
+            <input type="radio" id="masculino" name="genero">
+            <label for="masculino">Masculino</label>
+            <br>
+            <input type="radio" id="feminino" name="genero">
+            <label for="feminino">Feminino</label>
+            <br>
+            <input type="radio" id="outro" name="genero">
+            <label for="outro">Outro</label>
+            <br><br>
+
+            <p>Hobbies:</p>
+            <input type="checkbox" id="jogos" name="hobbies">
             <label for="jogos">Jogos</label>
             <br>
-
-            <input type="checkbox" id="musica">
+            <input type="checkbox" id="musica" name="hobbies">
             <label for="musica">Ouvir música</label>
             <br>
-
-            <input type="checkbox" id="esporte">
+            <input type="checkbox" id="esporte" name="hobbies">
             <label for="esporte">Esportes</label>
             <br>
-
-            <input type="checkbox" id="filmes">
+            <input type="checkbox" id="filmes" name="hobbies">
             <label for="filmes">Assistir filmes</label>
-            <br><br>
-
-            <p>Você prefere fazer hobbies:</p>
-
-            <input type="radio" name="preferencia" id="sozinho">
-            <label for="sozinho">Sozinho</label>
-            <br>
-
-            <input type="radio" name="preferencia" id="amigos">
-            <label for="amigos">Com amigos</label>
             <br><br>
 
             <label for="tempo">Tempo livre por dia:</label>
             <br>
-
-            <select id="tempo">
+            <select id="tempo" name="tempo">
                 <option>30 minutos</option>
                 <option>1 hora</option>
                 <option>2 horas</option>
                 <option>Mais de 3 horas</option>
             </select>
-
             <br><br>
 
             <button type="submit">Enviar</button>
