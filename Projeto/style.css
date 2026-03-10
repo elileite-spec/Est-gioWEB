@@ -1,13 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
     margin: 0;
+    padding: 50px;
 }
 
 .container {
@@ -15,7 +13,6 @@ body {
     padding: 30px;
     border-radius: 8px;
     width: 320px;
-    height: 100vh;
 }
 
 h1 {
