@@ -80,8 +80,7 @@ function renderizar() {
     texto.textContent = `${t.nome} (${t.grupo}) ⭐${t.dificuldade}`;
 
     if (t.feito) {
-      texto.style.textDecoration = "line-through";
-      texto.style.opacity = "0.6";
+      texto.classList.add("concluido");
     }
 
     const checkbox = document.createElement("input");
