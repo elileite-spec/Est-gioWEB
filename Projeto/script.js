@@ -1,6 +1,6 @@
 let treinos = [];
 
-// elementos
+//elementos
 const nomeInput = document.getElementById("nome");
 const grupoInput = document.getElementById("grupo");
 const dificuldadeInput = document.getElementById("dificuldade");
@@ -10,7 +10,7 @@ const filtro = document.getElementById("filtro");
 const btnAdicionar = document.getElementById("btnAdicionar");
 const btnLimpar = document.getElementById("btnLimpar");
 
-// eventos
+//eventos
 
 btnAdicionar.addEventListener("click", function () {
   const nome = nomeInput.value.trim();
@@ -22,13 +22,13 @@ btnAdicionar.addEventListener("click", function () {
     return;
   }
 
-  //  bloqueia fora do intervalo (sem arredondar)
+  //bloqueia fora do intervalo (sem arredondar)
   if (dificuldade < 0 || dificuldade > 5) {
     alert("A dificuldade deve estar entre 0 e 5!");
     return;
   }
 
-  //  não permitir repetidos
+  //não permitir repetidos
   const existe = treinos.some(
     t => t.nome.toLowerCase() === nome.toLowerCase() && t.grupo === grupo
   );
@@ -52,7 +52,7 @@ btnAdicionar.addEventListener("click", function () {
   renderizar();
 });
 
-// botão de limpar
+//botão de limpar
 btnLimpar.addEventListener("click", function () {
   const confirmar = confirm("Tem certeza que deseja apagar todas as tarefas?");
   if (confirmar) {
@@ -65,7 +65,7 @@ filtro.addEventListener("change", function () {
   renderizar();
 });
 
-// renderização
+//renderização
 function renderizar() {
   lista.innerHTML = "";
 
@@ -100,7 +100,7 @@ function renderizar() {
   total.textContent = treinos.length;
 }
 
-// enter para adicionar
+//enter para adicionar
 dificuldadeInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     btnAdicionar.click();
