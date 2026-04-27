@@ -13,12 +13,26 @@ const btnLimpar = document.getElementById("btnLimpar");
 // eventos
 
 btnAdicionar.addEventListener("click", function () {
-  const nome = nomeInput.value;
+  const nome = nomeInput.value.trim();
   const grupo = grupoInput.value;
-  const dificuldade = dificuldadeInput.value;
+  let dificuldade = Number(dificuldadeInput.value);
 
   if (!nome || !grupo || !dificuldade) {
     alert("Preencha tudo!");
+    return;
+  }
+
+  // ⭐ limite de 1 a 5
+  if (dificuldade > 5) dificuldade = 5;
+  if (dificuldade < 1) dificuldade = 1;
+
+  // 🚫 não permitir repetidos
+  const existe = treinos.some(
+    t => t.nome.toLowerCase() === nome.toLowerCase() && t.grupo === grupo
+  );
+
+  if (existe) {
+    alert("Esse exercício já foi adicionado!");
     return;
   }
 
