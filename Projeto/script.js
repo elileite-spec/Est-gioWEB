@@ -15,18 +15,20 @@ const btnLimpar = document.getElementById("btnLimpar");
 btnAdicionar.addEventListener("click", function () {
   const nome = nomeInput.value.trim();
   const grupo = grupoInput.value;
-  let dificuldade = Number(dificuldadeInput.value);
+  const dificuldade = Number(dificuldadeInput.value);
 
-  if (!nome || !grupo || !dificuldade) {
+  if (!nome || !grupo || dificuldadeInput.value === "") {
     alert("Preencha tudo!");
     return;
   }
 
-  // ⭐ limite de 1 a 5
-  if (dificuldade > 5) dificuldade = 5;
-  if (dificuldade < 1) dificuldade = 1;
+  //  bloqueia fora do intervalo (sem arredondar)
+  if (dificuldade < 0 || dificuldade > 5) {
+    alert("A dificuldade deve estar entre 0 e 5!");
+    return;
+  }
 
-  // 🚫 não permitir repetidos
+  //  não permitir repetidos
   const existe = treinos.some(
     t => t.nome.toLowerCase() === nome.toLowerCase() && t.grupo === grupo
   );
@@ -50,10 +52,10 @@ btnAdicionar.addEventListener("click", function () {
   renderizar();
 });
 
- //botao de limpar
+// botão de limpar
 btnLimpar.addEventListener("click", function () {
-    const confirmar = confirm("Tem certeza que deseja apagar todas as tarefas?")
-    if(confirmar){
+  const confirmar = confirm("Tem certeza que deseja apagar todas as tarefas?");
+  if (confirmar) {
     treinos = [];
     renderizar();
   }
