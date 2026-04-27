@@ -50,9 +50,13 @@ btnAdicionar.addEventListener("click", function () {
   renderizar();
 });
 
+ //botao de limpar
 btnLimpar.addEventListener("click", function () {
-  treinos = [];
-  renderizar();
+    const confirmar = confirm("Tem certeza que deseja apagar todas as tarefas?")
+    if(confirmar){
+    treinos = [];
+    renderizar();
+  }
 });
 
 filtro.addEventListener("change", function () {
