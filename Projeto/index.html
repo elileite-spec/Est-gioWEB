@@ -1,94 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Formulário de Hobbies</title>
-    <link rel="stylesheet" href="style.css">  
+  <meta charset="UTF-8">
+  <title>Controle de Treinos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div class="container">
+  <h1>🏋️ Controle de Treinos</h1>
 
-    <header>
-        <h1>Formulário de Hobbies</h1>
-        <nav>
-            <ul>
-                <li><a href="#formulario">Formulário</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <input type="text" id="nome" placeholder="Ex: Agachamento">
+  
+  <select id="grupo">
+    <option value="">Grupo muscular</option>
+    <option>Perna</option>
+    <option>Peito</option>
+    <option>Costas</option>
+    <option>Braço</option>
+    <option>Ombro</option>
+  </select>
 
-    <main>
-        <section id="formulario">
-            <article>
-                <h2>Preencha seus dados</h2>
-                <form action="#" method="post">
+  <input type="number" id="dificuldade" placeholder="Dificuldade (1 a 5)" min="1" max="5">
 
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+  <button id="btnAdicionar">Adicionar</button>
 
-                    <label for="idade">Idade:</label>
-                    <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
+  <label>
+    <input type="checkbox" id="filtro">
+    Mostrar só feitos hoje
+  </label>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu email">
+  <p>Total: <span id="total">0</span></p>
+  <ul id="lista"></ul>
+  <button id="btnLimpar">Limpar lista</button>
+</div>
 
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
-
-                    <label>Gênero:</label>
-                    <div class="opcoes">
-                        <label><input type="radio" name="genero" value="masculino"> Masculino</label>
-                        <label><input type="radio" name="genero" value="feminino"> Feminino</label>
-                        <label><input type="radio" name="genero" value="outro"> Outro</label>
-                    </div>
-
-                    <label>Hobbies:</label>
-                    <div class="opcoes">
-                        <label><input type="checkbox" name="hobbies" value="jogos"> Jogos</label>
-                        <label><input type="checkbox" name="hobbies" value="musica"> Ouvir música</label>
-                        <label><input type="checkbox" name="hobbies" value="esporte"> Esportes</label>
-                        <label><input type="checkbox" name="hobbies" value="filmes"> Assistir filmes</label>
-                    </div>
-
-                    <label for="tempo">Tempo livre por dia:</label>
-                    <select id="tempo" name="tempo">
-                        <option>30 minutos</option>
-                        <option>1 hora</option>
-                        <option>2 horas</option>
-                        <option>Mais de 3 horas</option>
-                    </select>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </article>
-
-            <aside>
-                <h3>Dicas de Hobbies</h3>
-                <ul>
-                    <li>Leitura</li>
-                    <li>Pintura</li>
-                    <li>Corrida</li>
-                    <li>Música</li>
-                </ul>
-                <img src="imgweb.avif" alt="Imagem de hobbies" width="300">
-                <img src="hobbies-de-pessoas.avif" alt="Imagem de hobbies" width="300">
-                <img src="conjunto-de-ilustracoes.avif" alt="Imagem de hobbies" width="300">
-            </aside>
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre este site</h2>
-            <p>Este formulário foi criado para coletar informações sobre os hobbies dos visitantes. <em>É totalmente gratuito e seguro!</em></p>
-        </section>
-    </main>
-
-    <footer id="contato">
-        <p>Contato: <a href="mailto:contato@hobbies.com">contato@hobbies.com</a></p>
-        <p>&copy; 2026 <strong>Hobbies & Co.</strong></p>
-    </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
